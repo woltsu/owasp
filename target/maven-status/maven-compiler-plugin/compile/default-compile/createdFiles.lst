@@ -1,0 +1,9 @@
+owasp/controller/newsController.class
+owasp/dao/NewsDao.class
+owasp/controller/indexController.class
+owasp/domain/News.class
+owasp/dao/AccountDao.class
+owasp/dao/Database.class
+owasp/config/SecurityConfiguration.class
+owasp/owaspApplication.class
+owasp/domain/Account.class
