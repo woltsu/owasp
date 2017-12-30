@@ -4,5 +4,6 @@ CREATE TABLE Account (
 );
 
 CREATE TABLE News (
-    content varchar(255)
+    content varchar(255),
+    publisher varchar(255)
 );

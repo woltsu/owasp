@@ -43,5 +43,10 @@ public class DefaultController {
         session.removeAttribute("name");
         return "redirect:/login";
     }
+    
+    @RequestMapping(value = "csrf-test", method = RequestMethod.GET)
+    public String testCsrf() {
+        return "test";
+    }
 
 }

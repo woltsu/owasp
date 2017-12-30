@@ -3,9 +3,11 @@ package owasp.domain;
 public class News {
 
     private String content;
+    private String publisher;
     
-    public News(String content) {
+    public News(String content, String publisher) {
         this.content = content;
+        this.publisher = publisher;
     }
     
     public void setContent(String content) {
@@ -18,7 +20,7 @@ public class News {
 
     @Override
     public String toString() {
-        return this.content;
+        return this.content + " ~" + this.publisher;
     }
     
 }

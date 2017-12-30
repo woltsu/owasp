@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import owasp.domain.Account;
 import owasp.domain.News;
 
 @Component
@@ -15,10 +16,10 @@ public class NewsDao {
     @Autowired
     private Database database;
 
-    public void insert(String content) {
+    public void insert(String content, Account a) {
         try {
-            database.getConnection().createStatement().executeUpdate("INSERT INTO " + TABLE + "(content) VALUES('"
-                                                                    + content + "');");
+            database.getConnection().createStatement().executeUpdate("INSERT INTO " + TABLE + "(content, publisher) VALUES('"
+                                                                    + content + "', '" + a.getUsername() + "');");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -29,7 +30,7 @@ public class NewsDao {
         try {
             ResultSet rs = database.getConnection().createStatement().executeQuery("SELECT * FROM " + TABLE);
             while (rs.next()) {
-                news.add(new News(rs.getString("content")));
+                news.add(new News(rs.getString("content"), rs.getString("publisher")));
             }
         } catch (Exception e) {
             e.printStackTrace();
