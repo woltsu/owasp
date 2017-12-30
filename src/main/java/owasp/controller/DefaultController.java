@@ -18,7 +18,7 @@ public class DefaultController {
     @Autowired
     private AccountDao accountDao;
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "*", method = RequestMethod.GET)
     public String getDefault() {
         return "redirect:/news";
     }

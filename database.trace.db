@@ -1,0 +1,6 @@
+2017-12-30 14:20:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "ACCOUNT" already exists; SQL statement:
+CREATE TABLE Account (
+    username varchar(255),
+    password varchar(255)
+) [42101-193]
