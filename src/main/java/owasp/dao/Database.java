@@ -3,6 +3,7 @@ package owasp.dao;
 import java.io.FileReader;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import javax.annotation.PostConstruct;
 import org.h2.tools.RunScript;
 import org.springframework.stereotype.Component;

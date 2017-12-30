@@ -10,7 +10,7 @@ import owasp.dao.AccountDao;
 import owasp.domain.Account;
 
 @Controller
-public class defaultController {
+public class DefaultController {
 
     @Autowired
     private HttpSession session;

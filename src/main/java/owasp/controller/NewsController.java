@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import owasp.dao.NewsDao;
 
 @Controller
-public class newsController {
+public class NewsController {
     
     @Autowired
     private NewsDao newsDao;
